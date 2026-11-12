@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>İrfan Karabey — Bilgisayar Mühendisi</title>
+  <meta name="description" content="İrfan Karabey — web, mobil ve oyun geliştiren bilgisayar mühendisi. Özgeçmiş, yetenekler ve projeler.">
+  <meta name="theme-color" content="#f1efe9">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%234a3aff'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-style='italic' font-size='38' text-anchor='middle' fill='white'%3Ei%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="importmap">
+  { "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+  } }
+  </script>
+</head>
+<body data-theme="light">
+  <canvas id="scene" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a class="brand" href="#hero"><i>i</i><span>İrfan Karabey</span></a>
+    <nav class="nav-links" aria-label="Bölümler">
+      <a href="#about" data-i18n="nav.about">Hakkımda</a>
+      <a href="#web" data-i18n="nav.areas">Uzmanlık</a>
+      <a href="#skills" data-i18n="nav.skills">Yetenekler</a>
+      <a href="#projects" data-i18n="nav.projects">Projeler</a>
+      <a href="#resume" data-i18n="nav.resume">Özgeçmiş</a>
+      <a href="#contact" data-i18n="nav.contact">İletişim</a>
+    </nav>
+    <div class="nav-right">
+      <button class="lang" type="button" aria-label="Dil / Language"><b>TR</b> / EN</button>
+      <button class="btn sm" type="button" data-print><span data-i18n="nav.cv">CV indir</span><span class="dot">↓</span></button>
+    </div>
+  </header>
+
+  <div class="progress" aria-hidden="true"><b>00</b><div class="bar"><i></i></div><span></span></div>
+
+  <main>
+    <!-- 0 · GİRİŞ -->
+    <section class="sec" id="hero" data-theme="light" data-label="Giriş" data-label-en="Intro">
+      <div class="col wide">
+        <p class="eyebrow reveal" data-i18n="hero.eyebrow">Bilgisayar Mühendisi · Web · Mobil · Oyun</p>
+        <h1 class="name"><span class="line"><span>İrfan Karabey<b>.</b></span></span></h1>
+        <p class="lead reveal" style="--i:3" data-i18n="hero.lead"><strong>Bilgisayar mühendisiyim.</strong> Web, mobil ve oyun tarafında; veritabanından arayüze, ilk taslaktan yayına kadar uçtan uca ürün geliştiriyorum.</p>
+        <div class="cta reveal" style="--i:4">
+          <button class="btn" type="button" data-print><span data-i18n="hero.cta1">CV'yi indir</span><span class="dot">↓</span></button>
+          <a class="btn ghost" href="#projects" data-i18n="hero.cta2">Projeleri gör</a>
+        </div>
+      </div>
+      <div class="scroll-hint"><span data-i18n="hero.scroll">Kaydır</span><i></i></div>
+    </section>
+
+    <!-- 1 · HAKKIMDA -->
+    <section class="sec right" id="about" data-theme="light" data-label="Hakkımda" data-label-en="About">
+      <div class="col">
+        <p class="eyebrow reveal"><b>01</b><span data-i18n="about.eyebrow">Hakkımda</span></p>
+        <h2 data-i18n="about.title"><span class="line"><span>Tek katmanda</span></span><span class="line" style="--i:1"><span><em>durmam.</em></span></span></h2>
+        <p class="lead reveal" style="--i:2" data-i18n="about.lead">Bir ürünün her katmanında çalışmayı seviyorum: veri modeli, gerçek zamanlı sunucu, arayüz, animasyon ve mağazaya çıkan uygulama. Aynı fikri tarayıcıda, telefonda ve oyun motorunda hayata geçirebiliyorum.</p>
+        <dl class="facts reveal" style="--i:3">
+          <div><dt>20 <em data-i18n="about.f1u">dil</em></dt><dd data-i18n="about.f1">destekleyen bir web platformu geliştirdim</dd></div>
+          <div><dt>26 <em data-i18n="about.f2u">modül</em></dt><dd data-i18n="about.f2">içeren bir Flutter mobil uygulaması</dd></div>
+          <div><dt>3 <em data-i18n="about.f3u">motor</em></dt><dd data-i18n="about.f3">Unity, Unreal ve kendi yazdığım 2B motor</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- 2 · WEB -->
+    <section class="sec" id="web" data-theme="light" data-label="Web" data-label-en="Web">
+      <div class="col">
+        <p class="eyebrow reveal"><b>02</b><span data-i18n="web.eyebrow">Uzmanlık · Web</span></p>
+        <h2 data-i18n="web.title"><span class="line"><span>Hızlı, canlı,</span></span><span class="line" style="--i:1"><span><em>çok dilli</em> web.</span></span></h2>
+        <p class="lead reveal" style="--i:2" data-i18n="web.lead">Ön yüzde Next.js ve React, arka tarafta Django. Gerçek zamanlı sohbetten arka plan görevlerine, kaydırmayla ilerleyen 3B sahnelerden uçtan uca testlere kadar bütün zinciri kuruyorum.</p>
+        <ul class="points reveal" style="--i:3">
+          <li><i>01</i><span data-i18n="web.p1">Next.js 16 · React 19 · TypeScript · Tailwind CSS</span></li>
+          <li><i>02</i><span data-i18n="web.p2">Django REST · Channels (WebSocket) · Celery · Redis · PostgreSQL</span></li>
+          <li><i>03</i><span data-i18n="web.p3">Three.js · GSAP · Framer Motion ile hareketli arayüz</span></li>
+          <li><i>04</i><span data-i18n="web.p4">next-intl ile 20 dil · Playwright ile uçtan uca test</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 3 · MOBİL -->
+    <section class="sec right" id="mobile" data-theme="light" data-label="Mobil" data-label-en="Mobile">
+      <div class="col">
+        <p class="eyebrow reveal"><b>03</b><span data-i18n="mobile.eyebrow">Uzmanlık · Mobil</span></p>
+        <h2 data-i18n="mobile.title"><span class="line"><span>Tek kod tabanı,</span></span><span class="line" style="--i:1"><span><em>iki mağaza.</em></span></span></h2>
+        <p class="lead reveal" style="--i:2" data-i18n="mobile.lead">Flutter ve React Native ile iOS ve Android'e aynı anda çıkan uygulamalar geliştiriyorum. Bildirimler, canlı sohbet, video oynatma ve çok dilli arayüz dahil.</p>
+        <ul class="points reveal" style="--i:3">
+          <li><i>01</i><span data-i18n="mobile.p1">Flutter · Dart · Riverpod ile durum yönetimi</span></li>
+          <li><i>02</i><span data-i18n="mobile.p2">React Native ile JavaScript / TypeScript tabanlı uygulamalar</span></li>
+          <li><i>03</i><span data-i18n="mobile.p3">Firebase bildirimleri · Google ile giriş · WebSocket sohbet</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 4 · OYUN -->
+    <section class="sec" id="game" data-theme="dark" data-label="Oyun" data-label-en="Games">
+      <div class="col">
+        <p class="eyebrow reveal"><b>04</b><span data-i18n="game.eyebrow">Uzmanlık · Oyun</span></p>
+        <h2 data-i18n="game.title"><span class="line"><span>Kodun bittiği yerde</span></span><span class="line" style="--i:1"><span><em>oyun başlar.</em></span></span></h2>
+        <p class="lead reveal" style="--i:2" data-i18n="game.lead">Unity ve Unreal Engine ile çalışıyorum; gerektiğinde motoru kendim yazıyorum. Oynanış sistemleri, deterministik simülasyon, yapay zekâ rakipler ve Blender'dan motora uzanan içerik hattı.</p>
+        <ul class="points reveal" style="--i:3">
+          <li><i>01</i><span data-i18n="game.p1">Unity 6 · C# · URP — motordan bağımsız, test edilen oyun çekirdeği</span></li>
+          <li><i>02</i><span data-i18n="game.p2">Unreal Engine 5 · C++ · Blueprint</span></li>
+          <li><i>03</i><span data-i18n="game.p3">TypeScript ile sıfırdan yazılmış 2B oyun motoru</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 5 · YETENEKLER -->
+    <section class="sec" id="skills" data-theme="light" data-label="Yetenekler" data-label-en="Skills">
+      <div class="col">
+        <p class="eyebrow reveal"><b>05</b><span data-i18n="skills.eyebrow">Yetenekler</span></p>
+        <h2 data-i18n="skills.title"><span class="line"><span>Alet</span></span><span class="line" style="--i:1"><span><em>çantam.</em></span></span></h2>
+        <dl class="skills reveal" style="--i:2">
+          <div><dt data-i18n="skills.g1">Ön yüz</dt><dd>Next.js, React, TypeScript, Tailwind CSS <span>· Three.js, GSAP, Framer Motion</span></dd></div>
+          <div><dt data-i18n="skills.g2">Arka uç</dt><dd>Python, Django, Django REST <span>· Channels, Celery, Redis, PostgreSQL, Firebase</span></dd></div>
+          <div><dt data-i18n="skills.g3">Mobil</dt><dd>Flutter, Dart, React Native <span>· Riverpod, FCM</span></dd></div>
+          <div><dt data-i18n="skills.g4">Oyun</dt><dd>Unity, C#, Unreal Engine, C++ <span>· Blueprint, URP, Blender</span></dd></div>
+          <div><dt data-i18n="skills.g5">Araçlar</dt><dd>Git, Playwright, FFmpeg <span data-i18n="skills.g5x">· yapay zekâ destekli geliştirme</span></dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- 6 · PROJELER: soldaki listeden seçilen proje, sağdaki 3B cihazın ekranında açılır -->
+    <section class="sec projects" id="projects" data-theme="light" data-label="Projeler" data-label-en="Projects">
+      <div class="col">
+        <p class="eyebrow reveal"><b>06</b><span data-i18n="proj.eyebrow">Projeler</span></p>
+        <h2 data-i18n="proj.title"><span class="line"><span>Seçilmiş <em>işler.</em></span></span></h2>
+
+        <ol class="plist reveal" style="--i:2">
+          <li class="pitem on">
+            <button class="phead" type="button" aria-expanded="true">
+              <i>01</i><span class="pt">MyAniBase</span><span class="pk" data-i18n="p1.kind">Web platformu</span><span class="px" aria-hidden="true"></span>
+            </button>
+            <div class="pbody"><div>
+              <p data-i18n="p1.desc">Anime kataloğu, topluluk ve oyunları tek çatı altında toplayan, yayında olan platform. Ön yüzü ve sunucusuyla baştan sona geliştirdim.</p>
+              <ul class="feat">
+                <li data-i18n="p1.f1">20 dilde arayüz, sağdan sola diller için hazırlık</li>
+                <li data-i18n="p1.f2">Three.js ile kaydırmayla gezilen 3B “evren” sahnesi</li>
+                <li data-i18n="p1.f3">Canlı sohbet, forum, topluluklar ve tarayıcı içi 3B oyunlar</li>
+              </ul>
+              <ul class="stack"><li>Next.js 16</li><li>React 19</li><li>TypeScript</li><li>Three.js</li><li>Django 5</li><li>Channels</li><li>Celery</li><li>PostgreSQL</li></ul>
+              <a class="plink" href="https://myanibase.com" target="_blank" rel="noopener">myanibase.com ↗</a>
+            </div></div>
+          </li>
+          <li class="pitem">
+            <button class="phead" type="button" aria-expanded="false">
+              <i>02</i><span class="pt">MyAniBase <em data-i18n="p2.em">Mobil</em></span><span class="pk" data-i18n="p2.kind">Mobil uygulama</span><span class="px" aria-hidden="true"></span>
+            </button>
+            <div class="pbody"><div>
+              <p data-i18n="p2.desc">Platformun Flutter ile yazılmış mobil istemcisi: 26 özellik modülü, anlık bildirimler, WebSocket sohbet ve video oynatma.</p>
+              <ul class="stack"><li>Flutter</li><li>Dart</li><li>Riverpod</li><li>Firebase</li><li>WebSocket</li></ul>
+            </div></div>
+          </li>
+          <li class="pitem">
+            <button class="phead" type="button" aria-expanded="false">
+              <i>03</i><span class="pt">Kırık <em>Saat</em></span><span class="pk" data-i18n="p3.kind">2B oyun · kendi motorum</span><span class="px" aria-hidden="true"></span>
+            </button>
+            <div class="pbody"><div>
+              <p data-i18n="p3.desc">Saat kulesinin durduğu bir şehirde geçen piksel-art aksiyon oyunu. Döngü, fizik, ses ve sinematik sistemleriyle motoru TypeScript'te sıfırdan yazdım; yaklaşık 144 oda içeriyor.</p>
+              <ul class="stack"><li>TypeScript</li><li>Canvas</li><li>esbuild</li><li data-i18n="p3.s4">Özel motor</li></ul>
+            </div></div>
+          </li>
+          <li class="pitem">
+            <button class="phead" type="button" aria-expanded="false">
+              <i>04</i><span class="pt">Kırık <em>Pusula</em></span><span class="pk" data-i18n="p4.kind">Strateji oyunu · Unity</span><span class="px" aria-hidden="true"></span>
+            </button>
+            <div class="pbody"><div>
+              <p data-i18n="p4.desc">Altıgen tahtada 1 oyuncunun 7 bota karşı oynadığı özgün bir auto-battler. Deterministik C# çekirdeği motordan bağımsız çalışıyor ve tekrar doğrulamasıyla test ediliyor.</p>
+              <ul class="stack"><li>Unity 6</li><li>C#</li><li>URP</li><li>Blender</li></ul>
+            </div></div>
+          </li>
+          <li class="pitem">
+            <button class="phead" type="button" aria-expanded="false">
+              <i>05</i><span class="pt" data-i18n="p5.title">Video üretim <em>hattı</em></span><span class="pk" data-i18n="p5.kind">Otomasyon</span><span class="px" aria-hidden="true"></span>
+            </button>
+            <div class="pbody"><div>
+              <p data-i18n="p5.desc">60 saniyelik tanıtım videolarını 10 dilde üreten otomasyon: SVG tabanlı kare üretimi, dile göre seslendirme ve FFmpeg ile birleştirme.</p>
+              <ul class="stack"><li>Python</li><li>FFmpeg</li><li>SVG</li><li>Playwright</li></ul>
+            </div></div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 7 · ÖZGEÇMİŞ -->
+    <section class="sec" id="resume" data-theme="light" data-label="Özgeçmiş" data-label-en="Résumé">
+      <div class="col wide">
+        <p class="eyebrow reveal"><b>07</b><span data-i18n="res.eyebrow">Özgeçmiş</span></p>
+        <h2 data-i18n="res.title"><span class="line"><span>Kısaca <em>özgeçmiş.</em></span></span></h2>
+
+        <div class="tl reveal" style="--i:2">
+          <h3 data-i18n="res.edu">Eğitim</h3>
+          <!-- TODO: üniversite adı ve yılları doldur -->
+          <div class="row">
+            <span class="when todo">20XX — 20XX</span>
+            <div><b data-i18n="res.edu1">Bilgisayar Mühendisliği, Lisans</b><span class="todo" data-i18n="res.edu1s">Üniversite adı</span></div>
+          </div>
+          <h3 data-i18n="res.exp">Deneyim</h3>
+          <!-- TODO: yılları ve varsa iş/staj deneyimlerini doldur -->
+          <div class="row">
+            <span class="when todo">20XX — <span data-i18n="res.now">bugün</span></span>
+            <div><b data-i18n="res.exp1">MyAniBase — Full-stack geliştirici</b><span data-i18n="res.exp1s">Web platformunun, sunucunun ve mobil uygulamanın tasarımı ve geliştirmesi; 20 dilde yayın.</span></div>
+          </div>
+          <div class="row">
+            <span class="when todo">20XX — <span data-i18n="res.now">bugün</span></span>
+            <div><b data-i18n="res.exp2">Bağımsız oyun geliştirme</b><span data-i18n="res.exp2s">Kırık Saat (kendi 2B motorum) ve Kırık Pusula (Unity) projelerinde oynanış, motor ve içerik hattı.</span></div>
+          </div>
+        </div>
+
+        <div class="cta reveal" style="--i:3">
+          <button class="btn" type="button" data-print><span data-i18n="res.cta">CV'yi PDF olarak indir</span><span class="dot">↓</span></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8 · İLETİŞİM -->
+    <section class="sec contact" id="contact" data-theme="dark" data-label="İletişim" data-label-en="Contact">
+      <div class="col">
+        <p class="eyebrow reveal"><b>08</b><span data-i18n="contact.eyebrow">İletişim</span></p>
+        <h2 data-i18n="contact.title"><span class="line"><span>Ekibinize</span></span><span class="line" style="--i:1"><span><em>katılmaya hazırım.</em></span></span></h2>
+        <p class="lead reveal" style="--i:2" data-i18n="contact.lead">Yazılım geliştirme pozisyonları ve proje bazlı işler için bana ulaşabilirsiniz.</p>
+        <div class="cta reveal" style="--i:3">
+          <!-- TODO: kendi adreslerinle değiştir -->
+          <a class="btn" href="mailto:ornek@eposta.com"><span data-i18n="contact.mail">E-posta gönder</span><span class="dot">→</span></a>
+          <a class="btn ghost" href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn ghost" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+        <!-- yalnızca yazdırılan CV'de görünür -->
+        <p class="print-only todo">ornek@eposta.com · github.com/kullanici · linkedin.com/in/kullanici</p>
+      </div>
+      <div class="wordmark" aria-hidden="true">İRFAN KARABEY</div>
+      <footer class="foot">
+        <span>© <span data-year>2026</span> İrfan Karabey</span>
+        <span data-i18n="foot.made">Three.js ile elde kodlandı</span>
+      </footer>
+    </section>
+  </main>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
